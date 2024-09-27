@@ -1,0 +1,64 @@
+.privacy{
+    font-family: 'Arial', sans-serif;
+    background-color: #f9f9f9; /* Light background for better contrast */
+    line-height: 1.6;
+    margin: 20px;
+    padding: 20px;
+}
+
+h1.terms-title {
+    font-size: 2.5em;
+    font-weight: bold;
+    color: orange;
+    text-align: center;
+    
+}
+
+h2.section-title {
+    font-size: 1.8em;
+    font-weight: bold;
+    color: #D35400; /* Orange color for section titles */
+    margin-top: 30px;
+    margin-bottom: 10px;
+    border-bottom: 2px solid #D35400; /* Underline effect for section titles */
+    padding-bottom: 5px;
+}
+
+p {
+    font-size: 1em;
+    font-weight: normal;
+    color: #555; /* Grey color for paragraph text */
+    margin-bottom: 15px;
+}
+
+ul {
+    list-style-type: square; /* Square bullets for lists */
+    margin-left: 20px;
+}
+
+li {
+    margin-bottom: 10px;
+}
+
+.effective-date {
+    font-style: italic;
+    color: #7F8C8D; /* Grey color for effective date */
+}
+
+hr {
+    border: none; /* Remove default border */
+    height: 2px; /* Height of the line */
+    background-color: #BDC3C7; /* Light grey color for the line */
+    margin: 40px 0; /* Margin above and below the line */
+}
+
+/* Hover effects for links */
+a {
+    color: #2980B9; /* Blue color for links */
+    text-decoration: none; /* Remove underline */
+}
+
+a:hover {
+    text-decoration: underline; /* Underline on hover */
+    color: #3498DB; /* Lighter blue on hover */
+}

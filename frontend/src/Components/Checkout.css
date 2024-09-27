@@ -1,0 +1,184 @@
+:root {
+    --primary-color: #007bff;
+    --hover-color: #0056b3;
+    --overlay-color-start: rgba(0, 123, 255, 0.7); /* Light blue */
+    --overlay-color-end: rgba(0, 86, 179, 0.7); /* Darker blue */
+    --border-color: #ddd;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.checkout {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    font-family: Arial, sans-serif;
+}
+
+.checkout h2 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.error-message {
+    color: red;
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+.form-group input,
+.form-group textarea,
+.form-group select {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid var(--border-color);
+    border-radius: 4px;
+    transition: border-color 0.3s ease; /* Smooth border transition */
+}
+
+.form-group input:focus,
+.form-group textarea:focus,
+.form-group select:focus {
+    border-color: var(--primary-color); /* Highlight border on focus */
+}
+
+.form-group textarea {
+    resize: vertical;
+    height: 100px;
+}
+
+.checkout h3 {
+    text-align: right;
+    margin-top: 20px;
+}
+
+.checkout-button {
+    display: block;
+    width: 100%;
+    padding: 15px;
+    background: linear-gradient(135deg, var(--primary-color), var(--hover-color)); /* Gradient */
+    color: white;
+    border: none;
+    border-radius: 4px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background 0.3s ease, transform 0.2s ease; /* Smooth transition */
+}
+
+.checkout-button:hover {
+    background: linear-gradient(135deg, var(--hover-color), #003d80); /* Darker gradient on hover */
+    transform: scale(1.05); /* Slightly enlarge on hover */
+}
+
+/* Overlay for the popup */
+.popup-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(135deg, var(--overlay-color-start), var(--overlay-color-end)); /* Gradient overlay */
+    display: flex; /* Centering the popup */
+    justify-content: center;
+    align-items: center;
+    z-index: 999; /* Above other content */
+    backdrop-filter: blur(5px); /* Blur effect */
+    opacity: 0; /* Start hidden */
+    animation: fadeIn 0.5s forwards; /* Fade-in animation */
+}
+
+/* Popup Styles */
+.popup {
+    background-color: white;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.3);
+    animation: slideIn 0.3s ease; /* Slide-in animation */
+    width: 90%;
+    max-width: 400px; /* Limit width */
+    text-align: center; /* Center text inside popup */
+    margin: -80px 160px;
+}
+
+/* Animation for overlay */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+/* Animation for popup */
+@keyframes slideIn {
+    from {
+        transform: translateY(-20px); /* Start slightly above */
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0); /* End in place */
+        opacity: 1;
+    }
+}
+
+.popup h3 {
+    margin: 0 0 10px 0;
+    font-size: 1.5em; /* Larger title */
+    font-weight: bold;
+}
+
+.popup p {
+    margin-bottom: 20px;
+    font-size: 1em; /* Standard message size */
+}
+
+.popup button {
+    background: linear-gradient(135deg, var(--primary-color), var(--hover-color)); /* Gradient */
+    color: white;
+    border: none;
+    border-radius: 4px;
+    padding: 10px 15px;
+    cursor: pointer;
+    font-size: 1em; /* Standard button size */
+    transition: background 0.3s ease, transform 0.2s ease; /* Smooth transitions */
+}
+
+.popup button:hover {
+    background: linear-gradient(135deg, var(--hover-color), #003d80); /* Darker gradient on hover */
+    transform: scale(1.05); /* Slightly enlarge on hover */
+}
+
+/* Additional styling for responsiveness */
+@media (max-width: 600px) {
+    .checkout {
+        padding: 10px;
+    }
+
+    .form-group input,
+    .form-group textarea,
+    .form-group select {
+        font-size: 14px;
+    }
+
+    .checkout-button,
+    .popup button {
+        font-size: 14px;
+        padding: 10px;
+    }
+}

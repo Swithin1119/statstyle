@@ -1,0 +1,313 @@
+.navbar {
+    background: linear-gradient(45deg, #f8f9fa, #e9ecef);
+    border-bottom: 1px solid #e7e7e7;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    transition: background 0.5s, box-shadow 0.3s;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 20px;
+}
+
+.navbar:hover {
+    background: linear-gradient(45deg, #e9ecef, #f8f9fa);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+.logo {
+    width: 150px;
+    margin-right: 20px;
+}
+
+.navbar .nav1 {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.navbar .nav1 a {
+    font-size: 16px;
+    font-weight: bold;
+    color: #333;
+    text-decoration: none;
+    position: relative;
+    padding-bottom: 5px;
+    transition: color 0.3s;
+}
+
+.navbar .nav1 a::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -2px;
+    width: 100%;
+    height: 2px;
+    background-color: transparent;
+    transition: transform 0.3s, background-color 0.3s;
+    transform: scaleX(0);
+    transform-origin: bottom right;
+}
+
+.navbar .nav1 a:hover {
+    color: #ff0000;
+}
+
+.navbar .nav1 a:hover::after {
+    background-color: #007bff;
+    transform: scaleX(1);
+}
+
+.nav2 {
+    position: relative;
+    margin: 0px 10px;
+}
+
+.navbar .nav2 {
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+
+.navbar .nav2 .dropdown {
+    position: relative;
+}
+
+.navbar .nav2 .dropdown-toggle {
+    text-decoration: none;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    padding: 8px 12px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.navbar .nav2 .dropdown-toggle:hover {
+    background-color: #0056b3;
+}
+
+.navbar .nav2 .dropdown-menu {
+    min-width: 150px;
+    background-color: #fff;
+    border: 1px solid #e7e7e7;
+    border-radius: 4px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s, visibility 0.3s;
+    position: absolute;
+    top: 100%;
+    right: 0;
+}
+
+.navbar .nav2 .dropdown-menu.show {
+    opacity: 1;
+    visibility: visible;
+}
+
+.navbar .nav2 .dropdown-item {
+    padding: 10px;
+    color: #333;
+    text-decoration: none;
+    display: block;
+    transition: background-color 0.3s;
+}
+
+.navbar .nav2 .dropdown-item:hover {
+    background-color: #f8f9fa;
+}
+
+.menu {
+    text-align: center;
+    margin: 20px 0;
+}
+
+.menu ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.menu ul li {
+    display: inline;
+}
+
+.menu a {
+    text-decoration: none;
+    color: #333;
+    font-weight: bold;
+    font-size: 16px;
+    transition: color 0.3s;
+}
+
+.menu a:hover {
+    color: #007bff;
+}
+
+.mw {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    margin: 200px;
+    margin-top: 4%;
+}
+
+.img-container {
+    display: flex;
+    flex-direction: column; /* Stack children vertically */
+    justify-content: space-between; /* Pushes the button to the bottom */
+    width: 200px;
+    text-align: center;
+    border: 1px solid #e7e7e7;
+    border-radius: 8px;
+    padding: 10px;
+    background-color: #f8f9fa;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.img-container:hover {
+    transform: scale(1.05);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.product-img {
+    width: 100%;
+    height: auto;
+    border-radius: 5px;
+}
+
+.tit {
+    display: block;
+    margin-top: 10px;
+    font-size: 14px;
+    color: #333;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.tit:hover {
+    color: #007bff;
+}
+
+.but {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    padding: 8px 16px;
+    font-size: 14px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    margin-top: 10px; /* Optional for spacing */
+}
+
+.but:hover {
+    background-color: #0056b3;
+}
+
+.search-bar {
+    position: relative;
+    margin: 20px auto;
+    text-align: center;
+    background: linear-gradient(135deg, #f0f4f8, #e0e7ef);
+    border-radius: 12px;
+    padding: 20px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.search-bar:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 25px rgba(0, 0, 0, 0.2);
+}
+
+.search-bar input {
+    width: 300px;
+    padding: 12px;
+    font-size: 18px;
+    border: 2px solid #007bff;
+    border-radius: 8px;
+    transition: border-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+    outline: none;
+}
+
+.search-bar input:focus {
+    border-color: #0056b3;
+    box-shadow: 0 0 5px rgba(0, 91, 187, 0.5);
+    transform: scale(1.05);
+}
+
+.search-term {
+    margin-top: 10px;
+    font-size: 16px;
+    color: #333;
+    opacity: 0;
+    transition: opacity 0.4s ease, transform 0.4s ease;
+    animation: fadeIn 0.4s forwards;
+    transform: translateY(-10px);
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+.cartitem {
+    background-color: #28a745; /* Initial color */
+    color: white; /* Text color */
+    border: none; /* No border */
+    padding: 10px 20px; /* Padding */
+    font-size: 16px; /* Font size */
+    border-radius: 5px; /* Rounded corners */
+    cursor: pointer; /* Pointer cursor on hover */
+    transition: background-color 0.3s ease, transform 0.2s ease; /* Transition for background and transform */
+    width: 100px;
+    float: right;
+}
+
+.cartitem:hover {
+    background-color: #218838; /* Darker green on hover */
+}
+
+.cartitem:active {
+    transform: scale(0.95); /* Slightly smaller when clicked */
+    background-color: #1e7e34; /* Even darker green when active */
+}
+.ads {
+    overflow: hidden; /* Ensures the text doesn't overflow */
+    white-space: nowrap; /* Prevents the text from wrapping */
+    width: 100%; /* Adjust width as needed */
+    position: relative; /* Allows absolute positioning of the animated text */
+    background-color:  #007bff;
+}
+
+.animate {
+    display: inline-block; /* Makes the element respond to animations */
+    font-size: 1.5em; /* Increase the text size (adjust as needed) */
+    font-family: 'Arial', sans-serif; /* Specify your desired font here */
+    animation: moveText 25s linear infinite; /* Slowed down the animation to 20 seconds */
+    color: white;
+}
+
+@keyframes moveText {
+    0% {
+        transform: translateX(100%); /* Start off the right side */
+    }
+    100% {
+        transform: translateX(-100%); /* Move to the left side */
+    }
+}

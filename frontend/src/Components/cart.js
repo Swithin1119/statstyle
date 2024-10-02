@@ -3,18 +3,12 @@ import { useNavigate } from 'react-router-dom';
 import './cart.css'; 
 
 function Cart() {
-    const [cart, setCart] = useState(JSON.parse(localStorage.getItem('cart')) || []);
+    const [cart, setCart] = useState([]);
     const navigate = useNavigate();
 
     useEffect(() => {
-        const handleStorageChange = () => {
-            setCart(JSON.parse(localStorage.getItem('cart')) || []);
-        };
-
-        window.addEventListener('storage', handleStorageChange);
-        return () => {
-            window.removeEventListener('storage', handleStorageChange);
-        };
+        const storedCart = localStorage.getItem('cart');
+        setCart(storedCart ? JSON.parse(storedCart) : []);
     }, []);
 
     const calculateTotal = () => {
@@ -28,21 +22,25 @@ function Cart() {
     };
 
     const removeItem = async (index) => {
-        await fetch(`http://localhost:5000/api/cart/${index}`, {
-            method: 'DELETE',
-        });
-        const updatedCart = cart.filter((_, i) => i !== index);
-        setCart(updatedCart);
-        localStorage.setItem('cart', JSON.stringify(updatedCart));
+        try {
+            await fetch(`http://localhost:5000/api/cart/${index}`, {
+                method: 'DELETE',
+            });
+            const updatedCart = cart.filter((_, i) => i !== index);
+            setCart(updatedCart);
+            localStorage.setItem('cart', JSON.stringify(updatedCart));
+        } catch (error) {
+            console.error("Error removing item from cart:", error);
+        }
     };
 
     const handleCheckout = () => {
         navigate('/checkout');
     };
 
-    const contshop = () =>{
-        navigate('/home')
-    }
+    const contshop = () => {
+        navigate('/home');
+    };
 
     return (
         <div className="cart">
@@ -65,8 +63,8 @@ function Cart() {
                     <div className="cart-summary">
                         <h3>Total Price: ₹{calculateTotal().toFixed(2)}</h3>
                         <button className="checkout-button" onClick={handleCheckout}>Checkout</button>
-                        <br></br>
-                        <button className="checkout-btn" onClick={contshop} >Continue Shopping</button>
+                        <br />
+                        <button className="checkout-btn" onClick={contshop}>Continue Shopping</button>
                     </div>
                 </div>
             )}

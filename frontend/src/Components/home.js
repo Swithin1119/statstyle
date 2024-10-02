@@ -9,7 +9,11 @@ function Home() {
     const [searchTerm, setSearchTerm] = useState('');
 
     const handleSignout = () => {
-        navigate('/Login');
+        // Clear user data from local storage
+        localStorage.removeItem('token'); // Remove the authentication token
+        localStorage.removeItem('email'); // Remove the stored email (if any)
+        localStorage.removeItem('cart'); // Clear the cart
+        navigate('/login'); // Redirect to login page
     };
 
     const addCart = (product) => {
@@ -41,7 +45,7 @@ function Home() {
     };
 
     const cartitem = () => {
-        navigate('/cart')
+        navigate('/cart');
     }
 
     return (

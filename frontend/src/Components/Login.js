@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import './log.css'; 
 
+
 const Login = () => {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
@@ -24,11 +25,10 @@ const Login = () => {
         throw new Error(data.error || 'Login failed');
       }
 
-      const { token} = data; // Assume userId is returned from the server
+      const { token } = data; 
       localStorage.setItem('token', token);
-      
-      localStorage.setItem('email', email); // Store email in local storage
-      window.location.href = '/home'; // Redirect to home after successful login
+      localStorage.setItem('email', email);
+      window.location.href = '/home'; 
     } catch (err) {
       setError(err.message);
     }
@@ -36,6 +36,7 @@ const Login = () => {
 
   return (
     <div className="login-container">
+      <img src='./logo3.png' alt="Company Logo" className="clogo" /> {/* Logo added here */}
       <h2 className="login-heading">Login</h2>
       <form className="login-form" onSubmit={handleSubmit}>
         <div className="login-form-group">

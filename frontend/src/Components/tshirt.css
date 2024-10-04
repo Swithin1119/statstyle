@@ -95,15 +95,18 @@
 .ts .cont-tshirt-18, .ts .cont-tshirt-19, .ts .cont-tshirt-20,
 .ts .cont-tshirt-21, .ts .cont-tshirt-22, .ts .cont-tshirt-23,
 .ts .cont-tshirt-24, .ts .cont-tshirt-25, .ts .cont-tshirt-26 {
-    width: 200px; 
-    height: 350px;
+    width: 200px;
     text-align: center;
     border: 1px solid #e7e7e7;
     border-radius: 8px;
     padding: 10px;
     background-color: #f8f9fa;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s, box-shadow 0.3s; 
+    transition: transform 0.3s, box-shadow 0.3s; /* Transition added here */
+    display: flex; 
+    flex-direction: column; 
+    justify-content: space-between; 
+    height: 350px;  
 }
 
 .ts .cont-tshirt-1:hover, .ts .cont-tshirt-2:hover, 

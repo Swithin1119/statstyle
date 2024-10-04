@@ -94,7 +94,7 @@ function Home() {
                 {filteredProducts.map((product) => (
                     <div className="img-container" key={product.id}>
                         <img className="product-img" src={product.imgSrc} alt={product.title} />
-                        <a className="tit" href="#">{product.title}</a>
+                        <a className="tit" href='/addcart'>{product.title}</a>
                         <p>{product.discount} {product.price}</p>
                         <button className="but" onClick={() => addCart(product)}>Add Cart</button>
                     </div>

@@ -1,0 +1,11 @@
+{
+    "configurations": [
+
+        {
+            "type": "chrome",
+            "name": "https://github.com/AIMOHANDASS/statstyle",
+            "request": "launch",
+            "url": "https://github.com/AIMOHANDASS/statstyle"
+        }
+    ]
+}

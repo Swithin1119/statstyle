@@ -65,7 +65,7 @@ function Tshirt() {
                 {tshirts.map((tshirt) => (
                     <div className={`cont-tshirt-${tshirt.id}`} key={tshirt.id}>
                         <img className={`tshirt-${tshirt.id}`} src={tshirt.imgSrc} alt={tshirt.title} />
-                        <a className="tit" href="#">{tshirt.title}</a>
+                        <a className="tit" href='/taddcart'>{tshirt.title}</a>
                         <p>{tshirt.discount} {tshirt.price}</p>
                         <button className='but' onClick={() => addCart(tshirt)}>Add Cart</button>
                     </div>

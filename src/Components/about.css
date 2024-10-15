@@ -1,0 +1,25 @@
+.about-us {
+    background-color: #f9f9f9; /* Light background for contrast */
+    padding: 20px;
+    border-radius: 8px;
+}
+
+.about-title {
+    color: #333;
+    font-size: 2em;
+    margin-bottom: 15px;
+}
+
+.about-intro, .about-mission, .about-vision, .about-commitment {
+    margin-bottom: 15px;
+    line-height: 1.6;
+}
+
+.values-list {
+    list-style-type: disc; /* Default bullet style */
+    padding-left: 20px; /* Indentation for the list */
+}
+
+.values-list li {
+    margin-bottom: 8px; /* Space between items */
+}

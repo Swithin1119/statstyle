@@ -1,0 +1,182 @@
+
+.navbar {
+    background: linear-gradient(45deg, #f8f9fa, #e9ecef); 
+    border-bottom: 1px solid #e7e7e7;
+    position: sticky; 
+    top: 0;
+    z-index: 1000; 
+    transition: background 0.5s, box-shadow 0.3s; 
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 20px;
+}
+
+
+.navbar:hover {
+    background: linear-gradient(45deg, #e9ecef, #f8f9fa); 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); 
+}
+.logo {
+    width: 150px; 
+    margin-right: 20px;
+}
+
+
+.navbar .nav1 {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.navbar .nav1 a {
+    font-size: 16px;
+    font-weight: bold;
+    color: #333;
+    text-decoration: none;
+    position: relative;
+    padding-bottom: 5px;
+    transition: color 0.3s; 
+}
+
+.navbar .nav1 a::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -2px; 
+    width: 100%;
+    height: 2px;
+    background-color: transparent; 
+    transition: transform 0.3s, background-color 0.3s; 
+    transform: scaleX(0); 
+    transform-origin: bottom right;
+}
+
+.navbar .nav1 a:hover {
+    color: #007bff; 
+}
+
+.navbar .nav1 a:hover::after {
+    background-color: #007bff; 
+    transform: scaleX(1); 
+}
+
+.menu {
+    text-align: center;
+    margin: 20px 0;
+}
+
+.menu a {
+    text-decoration: none;
+    color: #333;
+    font-weight: bold;
+    font-size: 16px;
+    transition: color 0.3s; 
+}
+
+.menu a:hover {
+    color: #007bff;
+}
+
+.ts {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    margin: 20px;
+}
+
+.ts .cont-tshirt-1, .ts .cont-tshirt-2, 
+.ts .cont-tshirt-3, .ts .cont-tshirt-4, .ts .cont-tshirt-5,
+.ts .cont-tshirt-6, .ts .cont-tshirt-7, .ts .cont-tshirt-8,
+.ts .cont-tshirt-9, .ts .cont-tshirt-10, .ts .cont-tshirt-11,
+.ts .cont-tshirt-12, .ts .cont-tshirt-13, .ts .cont-tshirt-14,
+.ts .cont-tshirt-15, .ts .cont-tshirt-16, .ts .cont-tshirt-17,
+.ts .cont-tshirt-18, .ts .cont-tshirt-19, .ts .cont-tshirt-20,
+.ts .cont-tshirt-21, .ts .cont-tshirt-22, .ts .cont-tshirt-23,
+.ts .cont-tshirt-24, .ts .cont-tshirt-25, .ts .cont-tshirt-26 {
+    width: 200px;
+    text-align: center;
+    border: 1px solid #e7e7e7;
+    border-radius: 8px;
+    padding: 10px;
+    background-color: #f8f9fa;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s, box-shadow 0.3s; /* Transition added here */
+    display: flex; 
+    flex-direction: column; 
+    justify-content: space-between; 
+    height: 350px;  
+}
+
+.ts .cont-tshirt-1:hover, .ts .cont-tshirt-2:hover, 
+.ts .cont-tshirt-3:hover, .ts .cont-tshirt-4:hover, .ts .cont-tshirt-5:hover,
+.ts .cont-tshirt-6:hover, .ts .cont-tshirt-7:hover, .ts .cont-tshirt-8:hover,
+.ts .cont-tshirt-9:hover, .ts .cont-tshirt-10:hover, .ts .cont-tshirt-11:hover,
+.ts .cont-tshirt-12:hover, .ts .cont-tshirt-13:hover, .ts .cont-tshirt-14:hover,
+.ts .cont-tshirt-15:hover, .ts .cont-tshirt-16:hover, .ts .cont-tshirt-17:hover,
+.ts .cont-tshirt-18:hover, .ts .cont-tshirt-19:hover, .ts .cont-tshirt-20:hover,
+.ts .cont-tshirt-21:hover, .ts .cont-tshirt-22:hover, .ts .cont-tshirt-23:hover,
+.ts .cont-tshirt-24:hover, .ts .cont-tshirt-25:hover, .ts .cont-tshirt-26:hover {
+    transform: scale(1.05); 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); 
+}
+
+.ts .tshirt-1, .ts .tshirt-2, 
+.ts .tshirt-3, .ts .tshirt-4, .ts .tshirt-5,
+.ts .tshirt-6, .ts .tshirt-7, .ts .tshirt-8,
+.ts .tshirt-9, .ts .tshirt-10, .ts .tshirt-11,
+.ts .tshirt-12, .ts .tshirt-13, .ts .tshirt-14,
+.ts .tshirt-15, .ts .tshirt-16, .ts .tshirt-17,
+.ts .tshirt-18, .ts .tshirt-19, .ts .tshirt-20,
+.ts .tshirt-21, .ts .tshirt-22, .ts .tshirt-23,
+.ts .tshirt-24, .ts .tshirt-25, .ts .tshirt-26 {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 5px;
+}
+
+.tit {
+    display: block;
+    margin-top: 10px;
+    font-size: 14px;
+    color: #333;
+    text-decoration: none;
+    transition: color 0.3s; 
+}
+
+.tit:hover {
+    color: #007bff;
+}
+
+
+.but {
+    background-color: #007bff; 
+    color: #fff; 
+    border: none; 
+    border-radius: 4px; 
+    padding: 8px 16px; 
+    font-size: 14px; 
+    cursor: pointer; 
+    transition: background-color 0.3s; 
+    margin-top: auto; 
+}
+
+.but:hover {
+    background-color: #0056b3; 
+}
+.tst {
+    font-size: 3em; /* Large text size */
+    font-family: 'Arial', sans-serif; /* Choose your preferred font */
+    color: #333; /* Dark gray color */
+    text-align: center; /* Center the text */
+    margin: 20px 0; /* Add space above and below */
+    text-transform: uppercase; /* Make text uppercase */
+    letter-spacing: 2px; /* Increase space between letters */
+    transition: color 0.3s ease; /* Smooth color transition */
+}
+
+.tst:hover {
+    color: #007BFF; /* Change color on hover */
+}

@@ -1,7 +1,6 @@
 import React, { useState } from 'react';
 import './log.css'; 
 
-
 const Login = () => {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
@@ -28,7 +27,13 @@ const Login = () => {
       const { token } = data; 
       localStorage.setItem('token', token);
       localStorage.setItem('email', email);
-      window.location.href = '/home'; 
+
+      // Check if the user is an admin
+      if (email === 'mohan@admin.com' && password === 'admin123') {
+        window.location.href = '/adminOrders'; // Redirect to AdminOrders
+      } else {
+        window.location.href = '/home'; // Redirect to Home for normal users
+      }
     } catch (err) {
       setError(err.message);
     }

@@ -16,6 +16,7 @@ import Cdaddcart from './Components/cdaddcart';
 import Custshirt from './Components/custshirt';
 import Privacy from './Components/privacy';
 import Terms from './Components/terms';
+import AdminOrders from './Components/adminOrders';
 
 
 const App = () => {
@@ -26,6 +27,7 @@ const App = () => {
           <Route path="/" element={<Login />} />
           <Route path="/login" element={<Login />} />
           <Route path="/signup" element={<Signup />} />
+          <Route path='/adminOrders' element={<AdminOrders />} />
           <Route path="/home" element={<Home />} />
           <Route path='/tshirt' element={<Tshirt />} />
           <Route path='/shirt' element={<Shirt />} />

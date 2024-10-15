@@ -1,16 +1,16 @@
 import React, { useState, useEffect } from 'react';
-import { useNavigate } from 'react-router-dom'; // Import useNavigate for redirection
+import { useNavigate } from 'react-router-dom';
 import './adminOrders.css';
 
 const AdminOrders = () => {
   const [orders, setOrders] = useState([]);
   const [error, setError] = useState('');
-  const [selectedItem, setSelectedItem] = useState(null); // State for the selected item
-  const navigate = useNavigate();  // Initialize useNavigate to handle redirection
+  const [selectedOrder, setSelectedOrder] = useState(null); // State for the selected order
+  const navigate = useNavigate();
 
   useEffect(() => {
     const fetchOrders = async () => {
-      const token = localStorage.getItem('token'); 
+      const token = localStorage.getItem('token');
 
       try {
         const response = await fetch('http://localhost:5000/api/orders', {
@@ -37,14 +37,14 @@ const AdminOrders = () => {
   }, []);
 
   // Function to handle item click
-  const handleItemClick = (item) => {
-    setSelectedItem(item);
+  const handleViewOrderClick = (order) => {
+    setSelectedOrder(order); // Store the entire order, not individual item
   };
 
   // Function to log out
   const handleLogout = () => {
-    localStorage.removeItem('token');  // Clear the token from localStorage
-    navigate('/login');  // Redirect to the login page (or any other route)
+    localStorage.removeItem('token');
+    navigate('/login');
   };
 
   return (
@@ -65,6 +65,7 @@ const AdminOrders = () => {
             <th>Items</th>
             <th>Total</th>
             <th>Status</th>
+            <th>Action</th> {/* Changed to generic Action column */}
           </tr>
         </thead>
         <tbody>
@@ -76,32 +77,42 @@ const AdminOrders = () => {
                 {order.items.map((item, index) => (
                   <div key={item.productId}>
                     {item.name} (x{item.quantity})
-                    {/* Button to view item details */}
-                    <button 
-                      className="view-item-button" 
-                      onClick={() => handleItemClick(item)}
-                    >
-                      View Item
-                    </button>
                   </div>
                 ))}
               </td>
               <td>${order.total}</td>
               <td>{order.status}</td>
+              <td>
+                {/* Single View Order button per row */}
+                <button 
+                  className="view-item-button" 
+                  onClick={() => handleViewOrderClick(order)}
+                >
+                  View Order
+                </button>
+              </td>
             </tr>
           ))}
         </tbody>
       </table>
 
-      {/* Display selected item details in a modal or separate section */}
-      {selectedItem && (
+      {/* Display selected order details in a modal */}
+      {selectedOrder && (
         <div className="item-details-modal">
-          <h3>Item Details</h3>
-          <p><strong>Name:</strong> {selectedItem.name}</p>
-          <p><strong>Quantity:</strong> {selectedItem.quantity}</p>
-          {/* Assuming there is an image field in the item */}
-          <img src={selectedItem.imageUrl} alt={selectedItem.name} className="item-image" />
-          <button className="close-button" onClick={() => setSelectedItem(null)}>Close</button>
+          <h3>Order Details</h3>
+          <p><strong>Order ID:</strong> {selectedOrder._id}</p>
+          <p><strong>User ID:</strong> {selectedOrder.userId}</p>
+          <p><strong>Total:</strong> ${selectedOrder.total}</p>
+          <h4>Items</h4>
+          {selectedOrder.items.map(item => (
+            <div key={item.productId}>
+              <p><strong>Item:</strong> {item.name} (x{item.quantity})</p>
+              <img src={item.imageUrl} alt={item.name} className="item-image" />
+            </div>
+          ))}
+          <button className="close-button" onClick={() => setSelectedOrder(null)}>
+            Close
+          </button>
         </div>
       )}
     </div>

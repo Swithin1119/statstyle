@@ -1,0 +1,183 @@
+
+.navbar {
+    background: linear-gradient(45deg, #f8f9fa, #e9ecef); 
+    border-bottom: 1px solid #e7e7e7;
+    position: sticky; 
+    top: 0;
+    z-index: 1000; 
+    transition: background 0.5s, box-shadow 0.3s; 
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 20px;
+}
+
+
+.navbar:hover {
+    background: linear-gradient(45deg, #e9ecef, #f8f9fa); 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); 
+}
+.logo {
+    width: 150px; 
+    margin-right: 20px;
+}
+
+
+.navbar .nav1 {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.navbar .nav1 a {
+    font-size: 16px;
+    font-weight: bold;
+    color: #333;
+    text-decoration: none;
+    position: relative;
+    padding-bottom: 5px;
+    transition: color 0.3s; 
+}
+
+.navbar .nav1 a::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -2px; 
+    width: 100%;
+    height: 2px;
+    background-color: transparent; 
+    transition: transform 0.3s, background-color 0.3s; 
+    transform: scaleX(0); 
+    transform-origin: bottom right;
+}
+
+.navbar .nav1 a:hover {
+    color: #060606; 
+}
+
+.navbar .nav1 a:hover::after {
+    background-color: #0c0c0c; 
+    transform: scaleX(1); 
+}
+
+.menu {
+    text-align: center;
+    margin: 20px 0;
+}
+
+.menu a {
+    text-decoration: none;
+    color: #333;
+    font-weight: bold;
+    font-size: 16px;
+    transition: color 0.3s; 
+}
+
+.menu a:hover {
+    color: #0a0a0a;
+}
+
+.pt {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    margin: 20px;
+}
+
+.pt .cont-pant-1, .pt .cont-pant-2, 
+.pt .cont-pant-3, .pt .cont-pant-4, .pt .cont-pant-5,
+.pt .cont-pant-6, .pt .cont-pant-7, .pt .cont-pant-8,
+.pt .cont-pant-9, .pt .cont-pant-10, .pt .cont-pant-11,
+.pt .cont-pant-12, .pt .cont-pant-13, .pt .cont-pant-14,
+.pt .cont-pant-15, .pt .cont-pant-16, .pt .cont-pant-17,
+.pt .cont-pant-18, .pt .cont-pant-19, .pt .cont-pant-20,
+.pt .cont-pant-21, .pt .cont-pant-22, .pt .cont-pant-23,
+.pt .cont-pant-24, .pt .cont-pant-25, .pt .cont-pant-26 {
+    width: 200px;
+    text-align: center;
+    border: 1px solid #e7e7e7;
+    border-radius: 8px;
+    padding: 10px;
+    background-color: #ffffff;
+    box-shadow: 0 2px 5px rgba(57, 149, 192, 0.1);
+    transition: transform 0.2s, box-shadow 0.3s; 
+    display: flex; 
+    flex-direction: column; 
+    justify-content: space-between; 
+    height: 350px;  
+}
+
+.pt .cont-pant-1:hover, .pt  .cont-pant-2:hover, 
+.pt  .cont-pant-3:hover, .pt  .cont-pantt-4:hover, .pt  .cont-pant-5:hover,
+.pt  .cont-pant-6:hover, .pt  .cont-pant-7:hover, .pt  .cont-pant-8:hover,
+.pt  .cont-pant-9:hover, .pt  .cont-pant-10:hover, .pt  .cont-pant-11:hover,
+.pt  .cont-pant-12:hover, .pt  .cont-pant-13:hover, .pt  .cont-pant-14:hover,
+.pt  .cont-pant-15:hover, .pt  .cont-pant-16:hover, .pt  .cont-pant-17:hover,
+.pt  .cont-pant-18:hover, .pt  .cont-pant-19:hover, .pt  .cont-pant-20:hover,
+.pt  .cont-pant-21:hover, .pt  .cont-pant-22:hover, .pt  .cont-pant-23:hover,
+.pt  .cont-pant-24:hover, .pt  .cont-pant-25:hover, .pt  .cont-pant-26:hover {
+    transform: scale(1.05); 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); 
+}
+
+.pt  .pant-1, .ts .pant-2, 
+.pt .pant-3, .pt  .pant-4, .pt  .pant-5,
+.pt  .pant-6, .pt  .pant-7, .pt  .pant-8,
+.pt  .pant-9, .pt  .pant-10, .pt  .pant-11,
+.pt  .pant-12, .pt  .pant-13, .pt  .pant-14,
+.pt  .pant-15, .pt  .pant-16, .pt  .pant-17,
+.pt  .pant-18, .pt  .pant-19, .pt  .pant-20,
+.pt  .pant-21, .pt  .pant-22, .pt  .pant-23,
+.pt  .pant-24, .pt  .pant-25, .pt .pant-26 {
+    width: 100%;
+    height: 170px;
+    object-fit: cover;
+    border-radius: 5px;
+}
+
+.tit {
+    display: block;
+    margin-top: 10px;
+    font-size: 16px;
+    color: #000000;
+    text-decoration: navajowhite;
+    transition: color 0.3s; 
+}
+
+.tit:hover {
+    color: #0a0a0a;
+}
+
+
+.but {
+    background-color: #000000; 
+    color: #ffffff; 
+    border: none; 
+    border-radius: 4px; 
+    padding: 8px 16px; 
+    font-size: 14px; 
+    cursor: pointer; 
+    transition: background-color 0.3s; 
+    margin-top: auto; 
+}      
+
+.but:hover {
+    background-color: #18a9c7;
+    transform: translateY(-2px);
+}
+.pt {
+    font-size: 1em; 
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif; 
+    color: #000000; 
+    text-align: center; 
+    margin: 20px 0; 
+    text-transform: uppercase; 
+    letter-spacing: 2px; 
+    transition: color 0.3s ease; 
+}
+
+.pt:hover {
+    color: #ed0909; 
+}

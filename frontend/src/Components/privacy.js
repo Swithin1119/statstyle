@@ -7,28 +7,22 @@ function privacy(){
         <div className="privacy">
             <div className='navbar'>
                 <img className='logo' src='./logo3.png' alt="Logo" />
-                <div className='menu'> 
-                            <a className='custom' href='/customizes'>Customize Your products</a>
-                    </div>
-                    
+                <h1 className="policy-title">Privacy Policy</h1>
                 <Navbar>
                     <Nav className='nav1'> 
                         <a className="a1" href="/home">Home</a>
                         <a className="a2" href="/shirt">Shirt</a>
-                        <a className="a3" href="/tshirt">T-shirt</a>
+                        <a className="a3" href="/pant">Pant</a>
                         <a className="a4" href="/about">About</a>
                     </Nav>
                 </Navbar>
             </div>
-
-            <br></br>
             <div className="privacy-policy">
-                <h1 className="policy-title">Privacy Policy</h1>
                 
             <hr></hr>
                 <div className="section introduction">
                     <h2>1. Introduction</h2>
-                    <p>Welcome to Starstyle, operated by AVC eVentures. This Privacy Policy explains how we collect, use, and protect your information when you use our services.</p>
+                    <p>Welcome to Frenzy, your go-to boutique for the latest in fashion! Frenzy has been a cornerstone of style and trend-setting for many years. As the new owner, I'm thrilled to continue our legacy of offering unique, great-quality pieces that inspire confidence and individuality.</p>
                 </div>
 
                 <div className="section information-collection">

@@ -20,7 +20,7 @@ function Checkout() {
     const handleSubmit = async (e) => {
         e.preventDefault();
     
-        const userId = 'user-id-placeholder'; // Replace with the actual user ID, e.g., from context or auth
+        const userId = 'user-id-placeholder'; 
         const orderDetails = {
             userId,
             name,
@@ -30,7 +30,7 @@ function Checkout() {
                 productId: item.productId,
                 name: item.title,
                 quantity: item.quantity || 1,
-                price: parseFloat(item.price.replace('₹', '').replace(',', '')), // Ensure price is a number
+                price: parseFloat(item.price.replace('₹', '').replace(',', '')),
                 imageUrl: item.imgSrc,
             })),
             total: calculateTotal(),
@@ -102,6 +102,7 @@ function Checkout() {
                         <option value="Credit Card">Credit Card</option>
                         <option value="Google Pay">Google Pay</option>
                         <option value="Cash on Delivery">Cash on Delivery</option>
+                        <option value="Git Card"> Gift card</option>
                     </select>
                 </div>
                 <h3>Total: ₹{calculateTotal().toFixed(2)}</h3>
@@ -112,8 +113,8 @@ function Checkout() {
 
             {showPopup && (
                 <div className="popup">
-                    <h3>Order Placed Successfully!</h3>
-                    <p>Your order has been successfully placed. Thank you!</p>
+                    <h3>your order is Placed</h3>
+                    <p>Your order has been successfully placed here you go!</p>
                     <button onClick={handleClosePopup}>Go to Home</button>
                 </div>
             )}

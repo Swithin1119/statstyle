@@ -17,6 +17,13 @@ function AddCart() {
         }
     }, [location.state, navigate]);
 
+    useEffect(() => {
+        if (cart.length > 0) {
+            localStorage.setItem('cart', JSON.stringify(cart));
+            navigate('/cart'); // Navigate after cart state is updated
+        }
+    }, [cart, navigate]);
+
     const addToCart = async () => {
         if (!product) return;
 
@@ -28,15 +35,11 @@ function AddCart() {
         }];
 
         setCart(newCart);
-        localStorage.setItem('cart', JSON.stringify(newCart));
-        navigate('/cart');
+
         try {
-            // Send cart items to the backend
             await axios.post('http://localhost:5000/api/cart', { items: newCart });
-            // Redirect to cart page after successful addition
         } catch (error) {
             console.error('Error adding to cart:', error);
-            // Optionally show an error message
         }
     };
 

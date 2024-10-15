@@ -6,63 +6,49 @@ function about(){
     return(
         <div className='about'>
             <div className='navbar'>
-                <img className='logo' src='./logo3.png' alt="Logo" />
-                <div className='menu'> 
-                            <a className='custom' href='/customizes'>Customize Your products</a>
-                    </div>
-                    
+                <img className='logo' src='./OIP.jpeg' alt="Logo" />
+                <h1 className="about-title">Vogue Wallet</h1>
                 <Navbar>
                     <Nav className='nav1'> 
                         <a className="a1" href="/home">Home</a>
                         <a className="a2" href="/shirt">Shirt</a>
-                        <a className="a3" href="/tshirt">T-shirt</a>
+                        <a className="a3" href="/pant">Pant</a>
                         <a className="a4" href="/about">About</a>
                     </Nav>
+                    
                 </Navbar>
             </div>
             
 
             <div className="about-us">
-    <h1 className="about-title">About Starstyle</h1>
+    <h1 className="about-title">About</h1>
     <p className="about-intro">
-        Welcome to Starstyle, your premier destination for customizable clothing! Operated by AVC eVentures, we believe that fashion should be a personal expression of who you are. Our mission is to provide you with high-quality, tailored clothing options that reflect your unique style.
+    The Vogue Wallet is a statement piece that merges fashion with function, designed for those who appreciate style in every detail. Crafted from high-quality materials, it boasts a sleek, minimalist design with clean lines and subtle yet sophisticated branding.
     </p>
 
     <div className="about-mission">
-        <h2>Our Mission</h2>
+        <h2>Target customer</h2>
         <p>
-            At Starstyle, we strive to empower individuals through fashion. We aim to make personalized clothing accessible and affordable, ensuring that everyone can wear what they love. Our commitment to quality and customer satisfaction drives everything we do.
+        Welcome to Vogue Wallet, your go-to boutique for the latest in fashion!  it has been a cornerstone of style and trend-setting for many years. As the new owner, I'm thrilled to continue our legacy of offering unique, great-quality pieces that inspire confidence and individuality
         </p>
     </div>
 
-    <div className="about-vision">
-        <h2>Our Vision</h2>
-        <p>
-            We envision a world where everyone can express their individuality through style. By providing customizable options, we hope to inspire creativity and confidence in our customers.
-        </p>
-    </div>
+    
+    
 
-    <div className="about-values">
-        <h2>Our Values</h2>
-        <ul className="values-list">
-            <li><strong>Quality:</strong> We prioritize high-quality materials and craftsmanship.</li>
-            <li><strong>Innovation:</strong> We constantly seek new ways to enhance your shopping experience.</li>
-            <li><strong>Community:</strong> We believe in building a supportive community of fashion enthusiasts.</li>
-            <li><strong>Sustainability:</strong> We are committed to ethical practices and reducing our environmental footprint.</li>
-        </ul>
-    </div>
-
-    <div className="about-commitment">
-        <h2>Our Commitment</h2>
+    <div className="about-shop">
+        <h2>About shop</h2>
         <p>
-            We are dedicated to ensuring a seamless shopping experience. From our user-friendly website to our responsive customer service, we are here to help you every step of the way. Your satisfaction is our top priority!
+        
+        Welcome to our shop, where style meets craftsmanship in every item we offer. We pride ourselves on curating a selection of premium products that blend elegance, functionality, and quality. Whether you're looking for the latest fashion accessories, timeless wardrobe staples, or unique pieces that stand out, our collection is designed to cater to diverse tastes and need
         </p>
     </div>
 
     <div className="about-contact">
         <h2>Contact Us</h2>
         <p>
-            Have questions or feedback? We’d love to hear from you! Reach out to us at <a href="mailto:hello@starstyle.in">hello@starstyle.in</a>.
+           any issues call the number
+           +91 7891234506
         </p>
     </div>
 </div>

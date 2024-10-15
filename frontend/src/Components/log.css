@@ -5,7 +5,7 @@
     align-items: center;
     justify-content: center;
     height: 100vh;
-    background-color: #f0f2f5;
+    background-image:url("C:\Users\swith\Downloads\mohan\mohan\frontend\public\images\new.jpg");
   }
   
   .login-heading {
@@ -13,7 +13,7 @@
     color: #333;
   }
   
-  .login-form {
+  .login-vg.png {
     width: 100%;
     max-width: 400px;
     padding: 20px;

@@ -27,7 +27,7 @@ const Login = () => {
 
         const { token } = data;
         localStorage.setItem('token', token);
-        window.location.href = '/home'; // Redirect to home after successful login
+        window.location.href = '/home'; 
     } catch (err) {
         setError(err.message);
     }
